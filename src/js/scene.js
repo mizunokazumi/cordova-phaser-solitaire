@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 
 import cardsAtlasJson from '../assets/cards/cards.json';
 import cardsAtlasPng from '../assets/cards/cards.png';
-import restartImage from '../assets/restart.png';
+import restartImage from '../assets/cards/restart.png';
 import placeOgg from '../assets/cards/cardPlace.ogg';
 import placeMp3 from '../assets/cards/cardPlace.mp3';
 
