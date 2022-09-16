@@ -26,7 +26,8 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin({
-        root: path.resolve(__dirname, "www")
+        root: path.resolve(__dirname, "www"),
+        cleanOnceBeforeBuildPatterns: [ "**/*", "!.gitkeep"]
     }),
     new webpack.DefinePlugin({
         CANVAS_RENDERER: JSON.stringify(true),
