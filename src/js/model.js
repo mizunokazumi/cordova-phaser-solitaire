@@ -236,8 +236,7 @@ export class Table extends EventEmitter {
         }
 
         this._moves = 0;
-
-        console.log(this);
+        this.emit("start", this);
     }
 
     move(card, stack): boolean {
@@ -245,6 +244,7 @@ export class Table extends EventEmitter {
             stack._add(card);
             this._openWorkStack();
             this._incMoves();
+            this._checkWinCondition();
             return true;
         } else {
             return false;
