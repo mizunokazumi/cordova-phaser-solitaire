@@ -92,6 +92,7 @@ class ResultStack extends Stack {
 
     _canAdd(c: Card):boolean {
         if(!c.open || c.suit != this._suit) return false;
+        if(c.stack instanceof WorkStack && c.order != c.stack.cards.length-1) return;
         const cards = this.cards;
         if(cards.length == 0){
             return c.rank == RankValues[0];
@@ -208,6 +209,7 @@ export class Table extends EventEmitter {
         });
         if(allCardsInResultStacks) {
             this.emit("win", this);
+            console.log("win");
         }
     }
 
