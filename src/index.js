@@ -1,7 +1,6 @@
 // for webpack
 import './index.html'
 import './index.css'
-import './assets/logo/logo.png'
 import './assets/board/board.png'
 import {start, started} from './js/app';
 
