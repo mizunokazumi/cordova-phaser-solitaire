@@ -6,7 +6,7 @@ In order to build and run this project follow the further steps. It should be re
 
 - nodejs v18.6.0
 - npm v8.13.2
-- [cordova 11](https://cordova.apache.org/#getstarted)
+- cordova 11 (`npm install -g cordova`)
 
 ## Steps
 
