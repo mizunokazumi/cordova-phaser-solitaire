@@ -26,7 +26,7 @@ npm i
 cordova platform add browser # android/ios
 ```
 
-4. Run
+4. Build
 ```bash
 cordova build browser
 ```
