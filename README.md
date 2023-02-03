@@ -28,7 +28,7 @@ cordova platform add browser # android/ios
 
 4. Build
 ```bash
-cordova build browser
+cordova build browser # android/ios
 ```
 
 5. Run
