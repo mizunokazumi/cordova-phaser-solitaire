@@ -1,0 +1,12 @@
+// Repos
+repositories {
+    google()
+    mavenCentral()
+    maven { url "https://android-sdk.is.com" }
+}
+
+dependencies {
+    implementation 'com.applovin:applovin-sdk:+'
+    implementation 'com.applovin.mediation:google-adapter:+'
+    // implementation 'com.applovin.mediation:google-adapter:21.0.0.2'
+}

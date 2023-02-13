@@ -34,8 +34,20 @@
     <allow-intent href="https://*/*" />
 
     <platform name="android">
+        <preference name="android-minSdkVersion" value="21" />
+        <preference name="android-targetSdkVersion" value="31" />
+        <preference name="GradleVersion" value="7.5.1" />
+        <preference name="AndroidGradlePluginVersion" value="7.3.0" />
+
         <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
             <application android:usesCleartextTraffic="true" />
         </edit-config>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <meta-data android:name="com.google.android.gms.ads.APPLICATION_ID"
+                android:value="ca-app-pub-3940256099942544~3347511713" />
+        </config-file>
+
+        <hook src="applovin/gradle-install-hook.js" type="after_prepare" />
     </platform>
 </widget>

@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
-import {MainScene} from './scene';
+import {TestScene} from './test';
+import './ads';
 
 const config = {
     type: Phaser.CANVAS,
@@ -11,11 +12,10 @@ const config = {
         width: 1080,
         height: 1920,
     },
-    scene: MainScene
+    scene: TestScene
 };
 
 export async function start() {
-    console.log(MainScene, Phaser);
     const game = new Phaser.Game(config);
     await new Promise((r)=>game.events.once("ready", r));
 }

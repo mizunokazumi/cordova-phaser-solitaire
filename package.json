@@ -5,6 +5,10 @@
   "description": "Classic game implemented with Cordova+Phaser.",
   "author": "Azur Games",
   "license": "MIT",
+  "scripts": {
+    "build-android": "export NODE_OPTIONS=--openssl-legacy-provider && cordova build android",
+    "deploy-android": "adb install ./platforms/android/app/build/outputs/apk/debug/app-debug.apk"
+  },
   "devDependencies": {
     "@babel/core": "^7.18.9",
     "@babel/preset-env": "^7.18.9",
@@ -16,6 +20,7 @@
     "cordova-android": "^10.1.2",
     "cordova-browser": "^6.0.0",
     "cordova-ios": "^6.2.0",
+    "cordova-plugin-applovin-max": "^1.0.9",
     "cordova-plugin-webpack": "^1.0.5",
     "file-loader": "^6.2.0",
     "raw-loader": "^4.0.2",
@@ -27,12 +32,13 @@
   },
   "cordova": {
     "platforms": [
-      "android",
       "ios",
-      "browser"
+      "browser",
+      "android"
     ],
     "plugins": {
-      "cordova-plugin-webpack": {}
+      "cordova-plugin-webpack": {},
+      "cordova-plugin-applovin-max": {}
     }
   },
   "dependencies": {
