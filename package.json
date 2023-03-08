@@ -7,6 +7,7 @@
   "license": "MIT",
   "scripts": {
     "build-android": "export NODE_OPTIONS=--openssl-legacy-provider && cordova build android",
+    "browser": "export NODE_OPTIONS=--openssl-legacy-provider && cordova run browser -- --livereload",
     "deploy-android": "adb install ./platforms/android/app/build/outputs/apk/debug/app-debug.apk"
   },
   "devDependencies": {
@@ -42,6 +43,7 @@
     }
   },
   "dependencies": {
-    "phaser": "^3.55.2"
+    "phaser": "^3.55.2",
+    "phaser3-rex-plugins": "^1.1.82"
   }
 }
