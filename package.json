@@ -20,7 +20,9 @@
     "cordova-android": "^10.1.2",
     "cordova-browser": "^6.0.0",
     "cordova-ios": "^6.2.0",
+    "cordova-plugin-android-webview-manager": "^0.3.0",
     "cordova-plugin-applovin-max": "^1.0.9",
+    "cordova-plugin-inappbrowser": "^5.0.0",
     "cordova-plugin-webpack": "^1.0.5",
     "file-loader": "^6.2.0",
     "raw-loader": "^4.0.2",
@@ -38,7 +40,9 @@
     ],
     "plugins": {
       "cordova-plugin-webpack": {},
-      "cordova-plugin-applovin-max": {}
+      "cordova-plugin-applovin-max": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-android-webview-manager": {}
     }
   },
   "dependencies": {

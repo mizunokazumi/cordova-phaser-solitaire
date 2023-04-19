@@ -50,10 +50,25 @@ export class TestScene extends Phaser.Scene {
                 y: 20
             }
         })
+        const button2 = this.add.text(540, 1920 - 80, "Webview", {
+            color: "#ffffff",
+            fontSize: "60px",
+            fontStyle: "bold",
+            backgroundColor: "#000",
+            padding: {
+                x: 20,
+                y: 20
+            }
+        })
         button.setOrigin(0.5, 0.5)
         button.setInteractive().on(Phaser.Input.Events.POINTER_UP, () => {
             var AppLovinMAX = cordova.require('cordova-plugin-applovin-max.AppLovinMAX')
             AppLovinMAX.showMediationDebugger()
+        })
+        button2.setInteractive().on(Phaser.Input.Events.POINTER_UP, () => {
+            // var AppLovinMAX = cordova.require('cordova-plugin-applovin-max.AppLovinMAX')
+            // AppLovinMAX.showMediationDebugger()
+            cordova.InAppBrowser.open('http://apache.org', '_blank', 'location=yes')
         })
     }
 

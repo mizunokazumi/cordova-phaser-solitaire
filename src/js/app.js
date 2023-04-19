@@ -6,6 +6,7 @@ const config = {
     type: Phaser.CANVAS,
     parent: 'phaser-solitaire',  
     transparent: true,
+    fps:{smoothStep:false},
     scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
@@ -18,5 +19,6 @@ const config = {
 export async function start() {
     const game = new Phaser.Game(config);
     await new Promise((r)=>game.events.once("ready", r));
+    window.game = game
 }
 
